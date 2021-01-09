@@ -6,7 +6,7 @@ conn = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '12345',
-  database: 'koperaasiDB',
+  database: 'koperasiDB',
 });
 
 conn.connect((err) => {
