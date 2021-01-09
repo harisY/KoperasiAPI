@@ -1,0 +1,24 @@
+{
+  "name": "koperasiapp",
+  "version": "1.0.0",
+  "description": "Rest API untuk koperasi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harisY/KoperasiAPI.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "nodejs"
+  ],
+  "author": "Haris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harisY/KoperasiAPI/issues"
+  },
+  "homepage": "https://github.com/harisY/KoperasiAPI#readme"
+}
