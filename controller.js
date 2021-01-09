@@ -65,3 +65,18 @@ exports.EditKaryawan = function (req, res) {
     }
   );
 };
+
+exports.DeleteKaryawan = function (req, res) {
+  var nik = req.body.nik;
+  connection.query(
+    'Delete from m_karyawan Where NIK=?',
+    [nik],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok('Berhasil hapus data', res);
+      }
+    }
+  );
+};
