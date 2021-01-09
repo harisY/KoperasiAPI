@@ -16,3 +16,18 @@ exports.GetKaryawan = function (req, res) {
     }
   });
 };
+
+exports.GetKaryawanByNIK = function (req, res) {
+  let nik = req.params.nik;
+  connection.query(
+    'select * from m_karyawan where NIK = ?',
+    [nik],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok(rows, res);
+      }
+    }
+  );
+};
