@@ -48,3 +48,20 @@ exports.AddKaryawan = function (req, res) {
     }
   );
 };
+
+exports.EditKaryawan = function (req, res) {
+  var nik = req.body.nik;
+  var nama = req.body.nama;
+  console.log(nik + ' ' + nama);
+  connection.query(
+    'Update m_karyawan set nama=? where NIK=?',
+    [nama, nik],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok('Berhasil update data', res);
+      }
+    }
+  );
+};
