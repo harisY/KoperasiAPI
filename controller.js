@@ -31,3 +31,20 @@ exports.GetKaryawanByNIK = function (req, res) {
     }
   );
 };
+
+exports.AddKaryawan = function (req, res) {
+  var nik = req.body.nik;
+  var nama = req.body.nama;
+
+  connection.query(
+    'Insert into m_karyawan(NIK,nama) values(?,?)',
+    [nik, nama],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok('Berhasil menambah data', res);
+      }
+    }
+  );
+};

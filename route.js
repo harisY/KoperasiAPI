@@ -5,4 +5,5 @@ module.exports = function (app) {
   app.route('/').get(jsonku.index);
   app.route('/api/karyawan').get(jsonku.GetKaryawan);
   app.route('/api/karyawan/:nik').get(jsonku.GetKaryawanByNIK);
+  app.route('/api/karyawan').post(jsonku.AddKaryawan);
 };
